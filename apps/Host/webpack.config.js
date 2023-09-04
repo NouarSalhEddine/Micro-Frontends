@@ -46,7 +46,7 @@ module.exports = (_, argv) => ({
       remotes: {
       header: `header@http://localhost:3001/moduleEntry.js`,
       dashboard: `dashboard@http://localhost:3002/moduleEntry.js`,
-      store: `store@http://localhost:3002/moduleEntry.js`,
+      store: `store@http://localhost:3003/moduleEntry.js`,
      },
       exposes: {},
       shared: {

@@ -15,3 +15,4 @@ const Dashboard = ({ dispatch }) => (
     </button>
   </div>
 );
+export default Dashboard;

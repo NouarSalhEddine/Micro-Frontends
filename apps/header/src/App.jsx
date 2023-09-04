@@ -1,14 +1,4 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import "./index.css";
-
-const App = () => (
-  <div className="container">
-    <div>Name: header</div>
-    <div>Framework: react</div>
-    <div>Language: JavaScript</div>
-    <div>CSS: Empty CSS</div>
-  </div>
-);
-ReactDOM.render(<App />, document.getElementById("app"));
+ReactDOM.render(<div>Name: Header</div>, document.getElementById("app"));
