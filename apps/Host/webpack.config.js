@@ -2,7 +2,7 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 
 const deps = require("./package.json").dependencies;
-module.exports = (_, argv) => ({
+module.exports = {
   output: {
     publicPath: "http://localhost:3000/",
   },
@@ -44,10 +44,10 @@ module.exports = (_, argv) => ({
       name: "host",
       filename: "remoteEntry.js",
       remotes: {
-      header: `header@http://localhost:3001/moduleEntry.js`,
-      dashboard: `dashboard@http://localhost:3002/moduleEntry.js`,
-      store: `store@http://localhost:3003/moduleEntry.js`,
-     },
+        header: 'header@http://localhost:3001/remoteEntry.js',
+        dashboard: 'dashboard@http://localhost:3002/remoteEntry.js',
+        store: 'store@http://localhost:3003/remoteEntry.js',
+      },
       exposes: {},
       shared: {
         ...deps,
@@ -65,4 +65,4 @@ module.exports = (_, argv) => ({
       template: "./src/index.html",
     }),
   ],
-});
+};

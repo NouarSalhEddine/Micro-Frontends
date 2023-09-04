@@ -3,4 +3,4 @@ import ReactDOM from "react-dom";
 
 import "./index.css";
 
-ReactDOM.render(<App />, document.getElementById("app"));
+ReactDOM.render(<div>Name: store</div>, document.getElementById("app"));
